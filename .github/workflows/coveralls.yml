@@ -1,46 +1,33 @@
-name: CI with Coveralls
+name: CI/CD with Coveralls
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  test:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set Up Node.js
-      uses: actions/setup-node@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        node-version: '14'
+        node-version: 14
 
-    - name: Install GitHub CLI
-      run: |
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-        sudo apt-add-repository https://cli.github.com/packages
-        sudo apt-get update
-        sudo apt-get install gh
-
-    - name: Clone Repository
-      run: |
-        env GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh repo clone OGgrizzley/COMP.SE.200-2023-2024-2
-        # Add authentication steps if your repository is private and requires authentication
-
-    - name: Change Directory
-      run: cd COMP.SE.200-2023-2024-2
-
-    - name: Install Dependencies
+    - name: Install dependencies
       run: npm install
 
-    - name: Run Tests and Upload Coverage
-      run: |
-        npm test
-        npm run coverage # Assuming this generates an LCOV file
+    - name: Run tests and generate coverage
+      run: npm test
 
-        # Run the Coveralls GitHub Action with the specified version
-        - name: Coveralls GitHub Action
-          uses: coverallsapp/github-action@v2.2.3
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            file: path/to/your/lcov-file
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@v2.2.3
+      with:
+        github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
