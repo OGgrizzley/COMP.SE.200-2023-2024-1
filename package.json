@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "",
   "license": "MIT",
@@ -13,20 +14,20 @@
     "openai": "^4.20.1"
    },
    "jest": {
-     "testEnvironment": "node",
-     "collectCoverage": true,
-     "coverageDirectory": "coverage",
-     "testMatch": [
-       "**/*.test.js"
-
-     ],
-     "transform": {
-       "^.+\\.js$": "babel-jest"
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testMatch": [
+      "**/*.test.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
     },
     "moduleFileExtensions": ["js", "json", "jsx", "ts", "tsx", "node"],
     "modulePathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/build/"],
     "modulePaths": ["<rootDir>"]
   },
+  
   "devDependencies": {
     "@babel/core": "^7.23.5",
     "@babel/preset-env": "^7.23.5",
