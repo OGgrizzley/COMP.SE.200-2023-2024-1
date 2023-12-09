@@ -4,30 +4,37 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build-and-test:
+  debug:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v2
       with:
-        node-version: 14
+        node-version: '14'
 
     - name: Install dependencies
       run: npm install
 
     - name: Run tests and generate coverage
-      run: npm test
+      run: npm test -- --coverage
 
-    - name: Coveralls GitHub Action
+    - name: Debugging Output
+      run: |
+        echo "Debugging Information:"
+        echo "Current Directory: $(pwd)"
+        echo "List of Files and Directories: $(ls -a)"
+        # Add more echo statements or logging commands as needed
+
+    - name: Set up Coveralls
       uses: coverallsapp/github-action@v2.2.3
       with:
-        github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Report to Coveralls
+      run: npm run coveralls

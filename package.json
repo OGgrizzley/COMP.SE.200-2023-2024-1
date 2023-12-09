@@ -14,8 +14,11 @@
   },
   "jest": {
     "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
     "testMatch": [
       "**/*.test.js"
+      
     ],
     "transform": {
       "^.+\\.js$": "babel-jest"
