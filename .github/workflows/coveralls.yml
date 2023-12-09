@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  debug:
+  test-and-coveralls:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,17 +24,10 @@ jobs:
     - name: Run tests and generate coverage
       run: npm test -- --coverage
 
-    - name: Debugging Output
-      run: |
-        echo "Debugging Information:"
-        echo "Current Directory: $(pwd)"
-        echo "List of Files and Directories: $(ls -a)"
-        # Add more echo statements or logging commands as needed
-
     - name: Set up Coveralls
       uses: coverallsapp/github-action@v2.2.3
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Report to Coveralls
       run: npm run coveralls
