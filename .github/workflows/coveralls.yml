@@ -10,17 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clone Repository
-      run: gh repo clone OGgrizzley/COMP.SE.200-2023-2024-2
-      # Add authentication steps if your repository is private and requires authentication
-
-    - name: Change Directory
-      run: cd COMP.SE.200-2023-2024-2
-
     - name: Set Up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14'
+
+    - name: Install GitHub CLI
+      run: |
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+        sudo apt-add-repository https://cli.github.com/packages
+        sudo apt-get update
+        sudo apt-get install gh
+
+    - name: Clone Repository
+      run: |
+        env GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh repo clone OGgrizzley/COMP.SE.200-2023-2024-2
+        # Add authentication steps if your repository is private and requires authentication
+
+    - name: Change Directory
+      run: cd COMP.SE.200-2023-2024-2
 
     - name: Install Dependencies
       run: npm install
@@ -29,6 +37,7 @@ jobs:
       run: |
         npm test
         npm run coverage # Assuming this generates an LCOV file
+
         # Run the Coveralls GitHub Action with the specified version
         - name: Coveralls GitHub Action
           uses: coverallsapp/github-action@v2.2.3
