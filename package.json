@@ -7,12 +7,14 @@
   "scripts": {
     "test": "jest",
     "coverage": "nyc npm test",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc report --reporter=text-lcov > coverage.lcov && coveralls < coverage.lcov"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "openai": "^4.20.1"
+    "openai": "^4.20.1",
+    "nyc": "^15.1.0",
+    "coveralls": "^3.1.0"
   },
   "jest": {
     "testEnvironment": "node",
@@ -49,4 +51,5 @@
     "jest": "^29.7.0",
     "nyc": "^15.1.0"
   }
+  
 }
