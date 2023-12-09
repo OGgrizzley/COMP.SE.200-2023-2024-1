@@ -1,4 +1,4 @@
-name: CI with Coveralls
+name: COMP.SE.200 Assignment
 
 on:
   push:
@@ -6,33 +6,18 @@ on:
       - main
 
 jobs:
-  test:
+  clone-repo:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clone Repository
-      run: gh repo clone OGgrizzley/COMP.SE.200-2023-2024-2
-      # Add authentication steps if your repository is private and requires authentication
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-    - name: Change Directory
-      run: cd COMP.SE.200-2023-2024-2
-
-    - name: Set Up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-
-    - name: Install Dependencies
-      run: npm install
-
-    - name: Run Tests and Upload Coverage
+    - name: Set up GitHub CLI
       run: |
-        npm test
-        npm run coverage # Assuming this generates an LCOV file
+        echo "env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}" > $GITHUB_ENV
+      shell: bash
 
-        # Run the Coveralls GitHub Action with the specified version
-        - name: Coveralls GitHub Action
-          uses: coverallsapp/github-action@v2.2.3
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            file: path/to/your/lcov-file
+    - name: Clone repository
+      run: gh repo clone OGgrizzley/COMP.SE.200-2023-2024-2
