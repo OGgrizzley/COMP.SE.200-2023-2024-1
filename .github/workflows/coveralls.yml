@@ -24,9 +24,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Add node_modules/.bin to PATH
-        run: echo "::add-path::$(pwd)/node_modules/.bin"
-
       - name: Run Tests and Generate Coverage
         run: npm test -- --coverage
 
