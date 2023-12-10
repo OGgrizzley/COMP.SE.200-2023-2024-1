@@ -1,4 +1,3 @@
-// tests/add.test.js
 import add from './add.js';
 
 describe('add function', () => {
@@ -25,18 +24,14 @@ describe('add function', () => {
   test('adds zero and zero', () => {
     expect(add(0, 0)).toBe(0);
   });
-});
 
-test('add', () => {
-  test('string with number', () => {
-      expect(add("1", 2)).toThrowError();
+  describe('add error cases', () => {
+    test('string with number', () => {
+      expect(() => add("1", 2)).toThrowError();
+    });
+
+    test('number with string', () => {
+      expect(() => add(1, "2")).toThrowError();
+    });
   });
 });
-
-test('add', () => {
-  test('number with string', () => {
-      expect(add(1, "2")).toThrowError();
-  });
-});
-
-// You can add more tests to cover edge cases or specific scenarios
