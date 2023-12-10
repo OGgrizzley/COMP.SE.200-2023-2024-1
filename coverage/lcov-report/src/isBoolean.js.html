@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/isArguments.js</title>
+    <title>Code coverage report for src/isBoolean.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> isArguments.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> isBoolean.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -86,7 +86,8 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -105,7 +106,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -113,25 +115,26 @@
 import isObjectLike from './isObjectLike.js'
 &nbsp;
 /**
- * Checks if `value` is likely an `arguments` object.
+ * Checks if `value` is classified as a boolean primitive or object.
  *
  * @since 0.1.0
  * @category Lang
  * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an `arguments` object, else `false`.
+ * @returns {boolean} Returns `true` if `value` is a boolean, else `false`.
  * @example
  *
- * isArguments(function() { return arguments }())
+ * isBoolean(false)
  * // =&gt; true
  *
- * isArguments([1, 2, 3])
+ * isBoolean(null)
  * // =&gt; false
  */
-function isArguments(value) {
-  return isObjectLike(value) &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >getTag(value) == '[object Arguments]'</span>
+function isBoolean(value) {
+  return value === true || value === false ||
+    (isObjectLike(value) &amp;&amp; getTag(value) == '[object Boolean]')
 }
 &nbsp;
-export default isArguments
+export default isBoolean
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
