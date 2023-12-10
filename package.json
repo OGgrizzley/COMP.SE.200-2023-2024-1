@@ -7,7 +7,7 @@
   "scripts": {
     "pretest": "mkdir -p .nyc_output",
     "test": "jest --coverage",
-    "coveralls": "./run_coveralls.sh"
+    "coveralls": "TOKEN = echo $COVERALLS_REPO_TOKEN | nyc report --reporter=text-lcov | coveralls --repo-token=$TOKEN"
   },
   
   
