@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702231768015" clover="3.2.0">
-  <project timestamp="1702231768016" name="All files">
-    <metrics statements="196" coveredstatements="165" conditionals="125" coveredconditionals="76" methods="30" coveredmethods="25" elements="351" coveredelements="266" complexity="0" loc="196" ncloc="196" packages="2" files="24" classes="24"/>
+<coverage generated="1702242652382" clover="3.2.0">
+  <project timestamp="1702242652382" name="All files">
+    <metrics statements="250" coveredstatements="212" conditionals="182" coveredconditionals="121" methods="41" coveredmethods="36" elements="473" coveredelements="369" complexity="0" loc="250" ncloc="250" packages="2" files="34" classes="34"/>
     <package name="src">
-      <metrics statements="58" coveredstatements="40" conditionals="65" coveredconditionals="41" methods="13" coveredmethods="12"/>
+      <metrics statements="62" coveredstatements="44" conditionals="69" coveredconditionals="43" methods="17" coveredmethods="16"/>
+      <file name="add.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/add.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="16" count="8" type="stmt"/>
+      </file>
+      <file name="at.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/at.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="19" count="7" type="stmt"/>
+      </file>
       <file name="camelCase.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/camelCase.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="24" count="1" type="stmt"/>
@@ -18,34 +26,42 @@
       </file>
       <file name="get.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/get.js">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="28" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="29" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="18" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="isArguments.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/isArguments.js">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="20" count="3" type="cond" truecount="1" falsecount="1"/>
       </file>
       <file name="isLength.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/isLength.js">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="29" count="18" type="cond" truecount="4" falsecount="0"/>
       </file>
+      <file name="isObjectLike.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/isObjectLike.js">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="24" count="3" type="cond" truecount="1" falsecount="1"/>
+      </file>
       <file name="isSymbol.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/isSymbol.js">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="19" count="21" type="stmt"/>
-        <line num="20" count="21" type="cond" truecount="4" falsecount="0"/>
+        <line num="19" count="32" type="stmt"/>
+        <line num="20" count="32" type="cond" truecount="4" falsecount="0"/>
       </file>
       <file name="memoize.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/memoize.js">
         <metrics statements="13" coveredstatements="12" conditionals="13" coveredconditionals="9" methods="2" coveredmethods="2"/>
-        <line num="44" count="1" type="cond" truecount="4" falsecount="1"/>
+        <line num="44" count="2" type="cond" truecount="4" falsecount="1"/>
         <line num="45" count="0" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-        <line num="48" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="49" count="3" type="stmt"/>
-        <line num="51" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="49" count="8" type="stmt"/>
+        <line num="51" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="52" count="1" type="stmt"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="55" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="56" count="2" type="stmt"/>
-        <line num="58" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="62" count="1" type="stmt"/>
+        <line num="54" count="7" type="stmt"/>
+        <line num="55" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="56" count="7" type="stmt"/>
+        <line num="58" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
       </file>
       <file name="slice.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/slice.js">
         <metrics statements="16" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -94,25 +110,72 @@
       </file>
     </package>
     <package name="src..internal">
-      <metrics statements="138" coveredstatements="125" conditionals="60" coveredconditionals="35" methods="17" coveredmethods="13"/>
+      <metrics statements="188" coveredstatements="168" conditionals="113" coveredconditionals="78" methods="24" coveredmethods="20"/>
       <file name="asciiToArray.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/asciiToArray.js">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
       </file>
+      <file name="baseAt.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/baseAt.js">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="18" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="7" type="stmt"/>
+      </file>
+      <file name="baseFlatten.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/baseFlatten.js">
+        <metrics statements="12" coveredstatements="10" conditionals="14" coveredconditionals="11" methods="1" coveredmethods="1"/>
+        <line num="15" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="23" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="24" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="30" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="34" count="7" type="stmt"/>
+      </file>
       <file name="baseGet.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/baseGet.js">
         <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="13" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="19" type="stmt"/>
-        <line num="21" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+        <line num="16" count="14" type="stmt"/>
+        <line num="18" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="35" type="stmt"/>
+        <line num="21" count="14" type="cond" truecount="4" falsecount="0"/>
+      </file>
+      <file name="baseToNumber.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/baseToNumber.js">
+        <metrics statements="6" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="15" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="12" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+      <file name="baseToString.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/baseToString.js">
+        <metrics statements="10" coveredstatements="8" conditionals="12" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="cond" truecount="2" falsecount="2"/>
       </file>
       <file name="castPath.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/castPath.js">
-        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="13" count="5" type="cond" truecount="2" falsecount="0"/>
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="13" count="14" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="16" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="12" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="castSlice.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/castSlice.js">
         <metrics statements="3" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -130,9 +193,25 @@
         <line num="26" count="14" type="cond" truecount="1" falsecount="1"/>
         <line num="30" count="14" type="stmt"/>
       </file>
+      <file name="createMathOperation.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/createMathOperation.js">
+        <metrics statements="13" coveredstatements="10" conditionals="16" coveredconditionals="12" methods="2" coveredmethods="2"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="8" type="cond" truecount="2" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="31" count="8" type="stmt"/>
+      </file>
       <file name="getTag.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/getTag.js">
         <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="1" count="4" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
         <line num="11" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="3" type="stmt"/>
@@ -151,26 +230,31 @@
         <line num="15" count="2" type="stmt"/>
         <line num="25" count="14" type="stmt"/>
       </file>
-      <file name="isKey.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/isKey.js">
-        <metrics statements="8" coveredstatements="6" conditionals="12" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <file name="isFlattenable.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/isFlattenable.js">
+        <metrics statements="2" coveredstatements="2" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="16" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="6" type="cond" truecount="3" falsecount="0"/>
+      </file>
+      <file name="isKey.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/isKey.js">
+        <metrics statements="8" coveredstatements="7" conditionals="12" coveredconditionals="11" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="16" count="12" type="cond" truecount="1" falsecount="1"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="cond" truecount="5" falsecount="1"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="19" count="12" type="stmt"/>
+        <line num="20" count="12" type="cond" truecount="6" falsecount="0"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="9" type="cond" truecount="4" falsecount="0"/>
       </file>
       <file name="memoizeCapped.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/memoizeCapped.js">
         <metrics statements="7" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="cond" truecount="1" falsecount="1"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
       </file>
       <file name="stringToArray.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/stringToArray.js">
         <metrics statements="1" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -178,29 +262,29 @@
       </file>
       <file name="stringToPath.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/stringToPath.js">
         <metrics statements="15" coveredstatements="13" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="28" count="7" type="cond" truecount="1" falsecount="1"/>
         <line num="29" count="0" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="32" count="7" type="stmt"/>
-        <line num="33" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="32" count="22" type="stmt"/>
+        <line num="33" count="22" type="cond" truecount="1" falsecount="1"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="36" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="39" count="7" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
+        <line num="36" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="39" count="22" type="stmt"/>
+        <line num="41" count="7" type="stmt"/>
       </file>
       <file name="toKey.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/toKey.js">
-        <metrics statements="5" coveredstatements="3" conditionals="8" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="14" count="19" type="cond" truecount="2" falsecount="2"/>
-        <line num="15" count="19" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="cond" truecount="0" falsecount="4"/>
+        <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="14" count="35" type="cond" truecount="4" falsecount="0"/>
+        <line num="15" count="32" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="cond" truecount="3" falsecount="1"/>
       </file>
       <file name="unicodeToArray.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/unicodeToArray.js">
         <metrics statements="24" coveredstatements="23" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
