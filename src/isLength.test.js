@@ -1,4 +1,4 @@
-import isLenght from './isLenght.js';
+import isLength from './isLength.js';
 
 describe('isLength', () => {
   it('should return true for valid array-like lengths', () => {

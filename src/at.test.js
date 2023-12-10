@@ -1,4 +1,4 @@
-import at from './addjs';
+import at from './at.js';
 describe('at', () => {
     it('should return an array of values corresponding to paths of object', () => {
         expect(at({ 'a': [{ 'b': { 'c': 3 } }, 4] }, ['a[0].b.c', 'a[1]'])).toBe([3, 4]);
