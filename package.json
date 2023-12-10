@@ -5,9 +5,11 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
+    "pretest": "mkdir -p .nyc_output",
     "test": "jest --coverage",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
+  
   "author": "",
   "license": "MIT",
   "dependencies": {
