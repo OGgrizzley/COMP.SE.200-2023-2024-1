@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latestREPO_OWNER=
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
@@ -33,7 +33,6 @@ jobs:
           echo "Current Directory: $(pwd)"
           echo "List of Files and Directories: $(ls -a)"
           echo "Coveralls Token: $COVERALLS_REPO_TOKEN"  # Add this line to print the Coveralls token
-
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.2.3
         with:
