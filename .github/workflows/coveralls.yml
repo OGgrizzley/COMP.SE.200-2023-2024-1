@@ -35,13 +35,10 @@ jobs:
           # Add more echo statements or logging commands as needed
 
       - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@v2
+        uses: coverallsapp/github-action@v2.2.3
         with:
-          github-token: ${{ github.token }}
+          github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
           file: coverage/lcov.info
 
       - name: Report to Coveralls
-        run: |
-          echo "COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN"
-          npm run coveralls
-
+        run: npm run coveralls
