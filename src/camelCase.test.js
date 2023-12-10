@@ -1,4 +1,4 @@
-var camelCase = require('../src/camelCase.js')
+import camelCase from './camelCase.js';
 
 describe('camelCase', () => {
   it('should convert string to camel case', () => {

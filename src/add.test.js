@@ -27,4 +27,16 @@ describe('add function', () => {
   });
 });
 
+describe('add', () => {
+  test('string with number', () => {
+      expect(add("1", 2)).toThrowError();
+  });
+});
+
+describe('add', () => {
+  test('number with string', () => {
+      expect(add(1, "2")).toThrowError();
+  });
+});
+
 // You can add more tests to cover edge cases or specific scenarios

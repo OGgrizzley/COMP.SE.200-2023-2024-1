@@ -1,4 +1,4 @@
-var toString = require('../src/toString.js')
+import toString from './toString.js';
 
 
 describe('toString', () => {

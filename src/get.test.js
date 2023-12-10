@@ -1,4 +1,4 @@
-var get = require('../src/get.js')
+import get from './get.js';
 
 describe('get', () => {
     it('should return the value of a property', () => {

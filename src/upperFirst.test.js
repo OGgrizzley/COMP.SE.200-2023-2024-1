@@ -1,5 +1,3 @@
-var upperFirst = require('../src/upperFirst.js')
-
 import upperFirst from './upperFirst.js'; // Asegúrate de importar adecuadamente el módulo
 
 describe('upperFirst', () => {
