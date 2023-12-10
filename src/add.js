@@ -12,7 +12,6 @@ import createMathOperation from './.internal/createMathOperation.js'
  *
  * add(6, 4)
  * // => 10
- * 
  */
 const add = createMathOperation((augend, addend) => augend + addend, 0)
 
