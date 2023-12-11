@@ -32,7 +32,7 @@ jobs:
           echo "Debugging Information:"
           echo "Current Directory: $(pwd)"
           echo "List of Files and Directories: $(ls -a)"
-          echo "Coveralls Token: "hola""  # Add this line to print the Coveralls token
+          echo "Coveralls Token: ${{ secrets.COVERALLS_REPO_TOKEN }}"  # Add this line to print the Coveralls token
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.2.3
         with:
