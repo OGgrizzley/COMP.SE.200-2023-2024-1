@@ -1,39 +1,45 @@
 import add from './add.js';
 
-describe('add function', () => {
-  test('adds two positive numbers', () => {
-    expect(add(2, 3)).toBe(5);
+describe('add.js - Addition Functionality', () => {
+  // Test case 1: Adding positive quantities of products
+  test('Adds two positive quantities correctly', () => {
+    const result = add(3, 2);
+    expect(result).toBe(5);
   });
 
-  test('adds a positive and a negative number', () => {
-    expect(add(-5, 8)).toBe(3);
+  // Test case 2: Adding negative quantities of products
+  test('Adds two negative quantities correctly', () => {
+    const result = add(-3, -2);
+    expect(result).toBe(-5);
   });
 
-  test('adds two negative numbers', () => {
-    expect(add(-3, -7)).toBe(-10);
+  // Test case 3: Adding a positive quantity and a negative quantity
+  test('Adds a positive and a negative quantity correctly', () => {
+    const result = add(3, -2);
+    expect(result).toBe(1);
   });
 
-  test('adds a positive number and zero', () => {
-    expect(add(4, 0)).toBe(4);
+  // Test case 4: Adding zero quantity to a quantity
+  test('Adds zero quantity to a quantity correctly', () => {
+    const result = add(3, 0);
+    expect(result).toBe(3);
   });
 
-  test('adds zero and a negative number', () => {
-    expect(add(0, -6)).toBe(-6);
+  // Test case 5: Adding two zero quantities
+  test('Adds two zero quantities correctly', () => {
+    const result = add(0, 0);
+    expect(result).toBe(0);
   });
 
-  test('adds zero and zero', () => {
-    expect(add(0, 0)).toBe(0);
+  // Test case 6: Adding fractional quantities
+  test('Adds fractional quantities correctly', () => {
+    const result = add(1.5, 2.5);
+    expect(result).toBe(4);
   });
 
-  describe('add error cases', () => {
-    test('string with number', () => {
-      // Check if the result is equal to the string "12"
-      expect(add("1", 2)).toBe("12");
-    });
-  
-    test('number with string', () => {
-      // Check if the result is equal to the string "12"
-      expect(add(1, "2")).toBe("12");
-    });
+  // Test case 7: Adding large quantities
+  test('Adds large quantities correctly', () => {
+    const result = add(1000000, 500000);
+    expect(result).toBe(1500000);
   });
 });

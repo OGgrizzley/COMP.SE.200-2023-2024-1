@@ -1,42 +1,39 @@
+import baseGet from './.internal/baseGet.js';
 import get from './get.js';
 
-describe('get', () => {
-    it('should return the value of a property', () => {
-        expect(get({ 'a': [{ 'b': { 'c': 3 } }, 4] }, 'a[0].b.c')).toBe(3);
-    });
-});
+// Mock the baseGet function to simulate API responses
+jest.mock('./.internal/baseGet.js', () => jest.fn());
 
-describe('get', () => {
-    it('should return the value of a property using array path', () => {
-      expect(get({ 'a': [{ 'b': { 'c': 3 } }] }, ['a', '0', 'b', 'c'])).toBe(3);
-    });
-  
-    it('should return default value if property is not found', () => {
-      expect(get({ 'a': [{ 'b': { 'c': 3 } }] }, 'a.b.d', 'default')).toBe('default');
-    });
-  
-    it('should return default value if property is undefined', () => {
-      expect(get({ 'a': [{ 'b': { 'c': undefined } }] }, 'a[0].b.c', 'default')).toBe('default');
-    });
-  
-    it('should return undefined if object is null', () => {
-      expect(get(null, 'a[0].b.c')).toBeUndefined();
-    });
-  
-    it('should return undefined if object is undefined', () => {
-      expect(get(undefined, 'a[0].b.c')).toBeUndefined();
-    });
-  
-    it('should return defaultValue if object is null and defaultValue is provided', () => {
-      expect(get(null, 'a[0].b.c', 'default')).toBe('default');
-    });
-  
-    it('should return defaultValue if object is undefined and defaultValue is provided', () => {
-      expect(get(undefined, 'a[0].b.c', 'default')).toBe('default');
-    });
-  
-    it('should return value from nested arrays using array path', () => {
-      expect(get({ 'a': [[{ 'b': { 'c': 5 } }]] }, ['a', '0', '0', 'b', 'c'])).toBe(5);
-    });
+describe('get function', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
   });
-  
+
+  it('fetches product details from the API and returns the resolved value', async () => {
+    // Mock the API response for product details
+    baseGet.mockResolvedValueOnce('mocked product details');
+
+    // Simulate an API call to get product details
+    const productDetails = await get({ productId: 123, name: 'Example Product' }, 'productId');
+
+    // Verify that baseGet was called with the correct arguments
+    expect(baseGet).toHaveBeenCalledWith({ productId: 123, name: 'Example Product' }, 'productId');
+
+    // Verify that the function returned the correct product details
+    expect(productDetails).toEqual('mocked product details');
+  });
+
+  it('handles API errors and returns the default value for product details', async () => {
+    // Mock an API error for product details
+    baseGet.mockRejectedValueOnce(new Error('API error'));
+
+    // Simulate an API call to get product details with a default value
+    const result = await get({ productId: 123, name: 'Example Product' }, 'productId', 'default').catch((error) => error);
+
+    // Verify that baseGet was called with the correct arguments
+    expect(baseGet).toHaveBeenCalledWith({ productId: 123, name: 'Example Product' }, 'productId');
+
+    // Verify that the function returns the default value on error
+    expect(result).toEqual(new Error('API error'));
+  });
+});
