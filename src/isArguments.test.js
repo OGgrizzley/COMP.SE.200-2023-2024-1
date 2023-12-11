@@ -3,7 +3,7 @@ import isArguments from './isArguments.js';
 
 describe('isArguments', () => {
   it('should return false for a function with arguments', () => {
-    // Since you can't modify isArguments.js, assume it always returns false for a function with arguments
+    
     expect(isArguments(function() { return arguments; })).to.be.false;
   });
 
