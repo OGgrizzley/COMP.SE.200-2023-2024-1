@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702319814352" clover="3.2.0">
-  <project timestamp="1702319814352" name="All files">
-    <metrics statements="266" coveredstatements="234" conditionals="192" coveredconditionals="135" methods="44" coveredmethods="39" elements="502" coveredelements="408" complexity="0" loc="266" ncloc="266" packages="2" files="37" classes="37"/>
+<coverage generated="1702323821081" clover="3.2.0">
+  <project timestamp="1702323821081" name="All files">
+    <metrics statements="266" coveredstatements="234" conditionals="192" coveredconditionals="136" methods="44" coveredmethods="39" elements="502" coveredelements="409" complexity="0" loc="266" ncloc="266" packages="2" files="37" classes="37"/>
     <package name="src">
-      <metrics statements="78" coveredstatements="76" conditionals="79" coveredconditionals="68" methods="20" coveredmethods="20"/>
+      <metrics statements="78" coveredstatements="76" conditionals="79" coveredconditionals="69" methods="20" coveredmethods="20"/>
       <file name="add.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/add.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="16" count="7" type="stmt"/>
@@ -42,8 +42,8 @@
         <line num="29" count="11" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="isArguments.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/isArguments.js">
-        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="20" count="3" type="cond" truecount="1" falsecount="1"/>
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="20" count="13" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="isBoolean.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/isBoolean.js">
         <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -56,7 +56,7 @@
       </file>
       <file name="isObjectLike.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/isObjectLike.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="24" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="21" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="isSymbol.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/isSymbol.js">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -236,10 +236,10 @@
       </file>
       <file name="getTag.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/getTag.js">
         <metrics statements="4" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="11" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="11" count="11" type="cond" truecount="1" falsecount="1"/>
         <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="14" count="8" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
       </file>
       <file name="hasUnicode.js" path="/Users/owengossen/Desktop/School/COMP/COMP.SE.200/COMP.SE.200-2023-2024-2/src/.internal/hasUnicode.js">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

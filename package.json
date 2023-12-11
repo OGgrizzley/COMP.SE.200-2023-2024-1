@@ -9,17 +9,12 @@
     "test": "jest --coverage",
     "coveralls": "nyc report --reporter=text-lcov | coveralls --repo-token=$COVERALLS_REPO_TOKEN"
   },
-  
-  
-  
-  
-  
   "author": "",
   "license": "MIT",
   "dependencies": {
     "openai": "^4.20.1"
-   },
-   "jest": {
+  },
+  "jest": {
     "testEnvironment": "node",
     "collectCoverage": true,
     "coverageDirectory": "coverage",
@@ -29,11 +24,22 @@
     "transform": {
       "^.+\\.js$": "babel-jest"
     },
-    "moduleFileExtensions": ["js", "json", "jsx", "ts", "tsx", "node"],
-    "modulePathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/build/"],
-    "modulePaths": ["<rootDir>"]
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/build/"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ]
   },
-  
   "nyc": {
     "reporter": [
       "text",
@@ -58,12 +64,13 @@
     "functions": 80,
     "branches": 80
   },
-  
   "devDependencies": {
     "@babel/core": "^7.23.5",
     "@babel/preset-env": "^7.23.5",
     "babel-jest": "^29.7.0",
+    "chai": "^4.3.10",
     "jest": "^29.7.0",
-    "nyc":"^15.1.0"
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
   }
 }
