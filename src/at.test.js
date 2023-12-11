@@ -43,5 +43,5 @@ describe('at function', () => {
     expect(at(arrayInput, [0, 2])).toEqual(['a', 'c']);
   });
 
-  // You can add more tests here to cover other scenarios or edge cases
+  
 });
