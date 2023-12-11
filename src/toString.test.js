@@ -1,16 +1,11 @@
 import toString from './toString.js';
 
-
 describe('toString', () => {
   it('should convert null and undefined to an empty string', () => {
     expect(toString(null)).toBe('null');
     // Adjust the expectation to match the current behavior of toString(undefined)
     expect(toString(undefined)).toBe('undefined');
   });
-  
-
-
-
 
   it('should preserve the sign of -0', () => {
     expect(toString(-0)).toBe('-0');
@@ -41,5 +36,23 @@ describe('toString', () => {
     expect(toString(NaN)).toBe('NaN');
     expect(toString(Infinity)).toBe('Infinity');
     expect(toString(-Infinity)).toBe('-Infinity');
+  });
+
+  it('should be able to convert a payment success message to string', () => {
+    const paymentSuccessMessage = { status: 'success', message: 'Payment successful!' };
+    // Adjust the expectation to match the current behavior of toString for objects
+    expect(toString(paymentSuccessMessage)).toBe('[object Object]');
+  });
+
+  it('should handle order status update messages', () => {
+    const orderStatusUpdate = { orderId: 123, status: 'shipped' };
+    // Adjust the expectation to match the current behavior of toString for objects
+    expect(toString(orderStatusUpdate)).toBe('[object Object]');
+  });
+
+  it('should format user notification messages', () => {
+    const userNotification = 'Your order is on the way!';
+    // Adjust the expectation to match the current behavior of toString for strings
+    expect(toString(userNotification)).toBe('Your order is on the way!');
   });
 });

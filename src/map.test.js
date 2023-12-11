@@ -42,4 +42,4 @@ test('map should convert prices to Euros correctly', () => {
   expect(productsInEuros).toEqual(expectedProducts);
 });
 
-// Add more test cases based on specific scenarios in your application
+
